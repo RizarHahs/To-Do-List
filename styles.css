@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  /* font-weight: 600; */
+}
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #a908d1, #003bb1);
+}
+.todo-app {
+  width: 100%;
+  max-width: 540px;
+  background: #fff;
+  margin: 0px auto 20px;
+  padding: 40px 30px 40px;
+  border-radius: 10px;
+  position: relative;
+  top: 100px;
+}
+.todo-app h2 {
+  color: #002765;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.todo-app h2 img {
+  width: 50px;
+  margin-left: 10px;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #edeef0;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  font-size: 15px;
+}
+button {
+  border: none;
+  outline: none;
+  padding: 16px 40px;
+  background: #c624f3;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 40px;
+  font-weight: 600;
+}
+ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  font-size: 18px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+ul li .cross {
+  position: relative;
+  float: right;
+  font-size: 35px;
+  transition: 0.3s all linear;
+  /* position: absolute;
+  left: 450px;
+  font-size: 30px; */
+}
+.cross:hover {
+  transform: rotate(180deg);
+}
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url(images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 17px;
+  left: 8px;
+}
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+ul li.checked::before {
+  background-image: url(images/checked.png);
+  /* background-color: #ecc5f7; */
+}
+/* .cross {
+  position: relative;
+  bottom: 3.8px;
+  float: right;
+  font-size: 25px;
+} */
+
+@media (min-width: 330px) and (max-width: 400px) {
+  button {
+    padding: 16px 25px;
+  }
+}
